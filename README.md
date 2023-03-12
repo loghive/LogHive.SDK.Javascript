@@ -3,23 +3,18 @@ This javascript libary is a SDK for the LogHive event and log service.
 LogHive is a log and event service specifically designed for software applications such as apps, websites, or services.
 With LogHive, push notifications can be sent to the web browser or to a mobile device, or the log messages can be analyzed in a separate dashboard.
 
-Checkout the NuGet Package: [![NuGet](https://img.shields.io/nuget/v/LogHive.svg)](https://www.nuget.org/packages/LogHive)
+Checkout the NPM: [![npm](https://img.shields.io/npm/v/loghive.svg)](https://www.npmjs.com/package/loghive)
 
 Licence: MIT
-
-## Compatibility
-The library is written in:
-[![.NET Version](https://img.shields.io/badge/.NET6.0-blue)](https://shields.io/)
-[![.NET Version](https://img.shields.io/badge/.NETStandard2.1-blue)](https://shields.io/)
 
 # Contents
 1. [General](#general)
 2. [Requirements](#requirements)
 3. [Documentation](#documentation)
-3. [Init](#init)
+3. [Installation](#installation)
 
 ## General
-Integration is very easy, a simple REST command is all that's needed to store your event in our lodatabase.
+Integration is very easy, a simple REST command is all that's needed to store your event in our database.
 This libary packs the http client into a nuget package. So you can push an event with just two lines of code.
 
 ## Requirements
@@ -32,7 +27,6 @@ A full documentation is available under [https://docs.loghive.app/](https://docs
 ```sh
 npm install --save loghive
 ```
-## Usage
 
 ### Import Library
 ```js
@@ -43,7 +37,7 @@ import { LogHive } from 'loghive';
 With the following code, you init the http client with your personal API key:
 ```js
 const logging = new LogHive({ 
-  key: 'gJ1swtzfsrpJ8KLzpFtd',
+  key: 'your-personal-api-key',
   projectName: 'yourprojectname'
 });
 ```
