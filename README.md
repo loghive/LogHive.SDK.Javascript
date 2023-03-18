@@ -44,10 +44,30 @@ const logging = new LogHive({
 
 ### Publish Event
 ```js
-logging.publish({
+logging.addEvent({
     groupName: "yourgroupname",
     eventName: "your-event-name",
     description: "descripton",
     notify: true
 });
+```
+
+### Publish Insight
+```js
+logging.addInsight({
+  name: "your-insight-name",
+  value: 100
+});
+```
+
+### Online/Offline State
+```js
+logging.setSystemOnline({
+  systemName: "your-system-name"
+});
+
+logging.setSystemOffline({
+  systemName: "your-system-name"
+});
+
 ```
