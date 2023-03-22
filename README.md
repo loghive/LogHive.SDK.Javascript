@@ -38,15 +38,15 @@ With the following code, you init the http client with your personal API key:
 ```js
 const logging = new LogHive({ 
   key: 'your-personal-api-key',
-  projectName: 'yourprojectname'
+  project: 'yourprojectname'
 });
 ```
 
 ### Publish Event
 ```js
 logging.addEvent({
-    groupName: "yourgroupname",
-    eventName: "your-event-name",
+    group: "yourgroupname",
+    event: "your-event-name",
     description: "descripton",
     notify: true
 });
@@ -55,7 +55,7 @@ logging.addEvent({
 ### Publish Insight
 ```js
 logging.addInsight({
-  name: "your-insight-name",
+  insight: "your-insight-name",
   value: 100
 });
 ```
@@ -63,11 +63,11 @@ logging.addInsight({
 ### Online/Offline State
 ```js
 logging.setSystemOnline({
-  systemName: "your-system-name"
+  system: "your-system-name"
 });
 
 logging.setSystemOffline({
-  systemName: "your-system-name"
+  system: "your-system-name"
 });
 
 ```

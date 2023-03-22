@@ -6,7 +6,7 @@ import { EventOptions, InsightOptions, OnlineOfflineOptions } from '../types/ind
  */
 export default class LogHive {
   private readonly key: string;
-  private readonly projectName: string;
+  private readonly project: string;
   private readonly logHiveEventUrl = 'https://api.loghive.app/v1/event/add';
   private readonly logHiveInsightUrl = 'https://api.loghive.app/v1/insight/add';
 
@@ -15,9 +15,9 @@ export default class LogHive {
    * @param key LogHive api token
    * @param project LogHive project name
    */
-  constructor({ key, projectName }: { key: string; projectName: string }) {
+  constructor({ key, project }: { key: string; project: string }) {
     this.key = key;
-    this.projectName = projectName;
+    this.project = project;
   }
 
   /**
@@ -34,7 +34,7 @@ export default class LogHive {
     const method = 'POST';
     const body = JSON.stringify({
       ...options,
-      projectName: this.projectName
+      project: this.project
     });
 
     const response = await fetch(this.logHiveEventUrl, { method, body, headers });
@@ -63,7 +63,7 @@ export default class LogHive {
     const method = 'POST';
     const body = JSON.stringify({
       ...options,
-      projectName: this.projectName
+      project: this.project
     });
 
     const response = await fetch(this.logHiveInsightUrl, { method, body, headers });
@@ -91,8 +91,8 @@ export default class LogHive {
 
     const method = 'POST';
     const body = JSON.stringify({
-      name: options.systemName,
-      projectName: this.projectName,
+      insight: options.system,
+      project: this.project,
       value: 1
     });
 
@@ -121,8 +121,8 @@ export default class LogHive {
 
     const method = 'POST';
     const body = JSON.stringify({
-      name: options.systemName,
-      projectName: this.projectName,
+      insight: options.system,
+      project: this.project,
       value: 0
     });
 

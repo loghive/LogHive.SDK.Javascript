@@ -5,12 +5,12 @@ export interface EventOptions {
     /**
      * group name
      */
-    groupName: string;
+    group: string;
 
     /**
      * event name
      */
-    eventName: string;
+    event: string;
 
     /**
      * description
@@ -31,7 +31,7 @@ export interface InsightOptions {
     /**
      * insight name
      */
-    insightName?: string;
+    insight?: string;
 
     /**
      * insight value
@@ -46,5 +46,5 @@ export interface OnlineOfflineOptions {
     /**
      * insight name
      */
-    systemName?: string;
+    system?: string;
 }
